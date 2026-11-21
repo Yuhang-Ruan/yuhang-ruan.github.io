@@ -51,7 +51,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-colo
   padding-block: clamp(36px, 7vw, 80px);
 }
 .profile-photo { margin-top: 5px; }
-.profile-photo img { display: block; width: 100%; height: auto; background: #e9f0f6; border-radius: 4px; }
+.profile-photo > img { display: block; width: 100%; height: auto; background: #e9f0f6; border-radius: 4px; }
 .profile-name { margin-top: 13px; font-size: clamp(1.45rem, 3vw, 1.8rem); }
 .profile-name span { font-size: .68em; white-space: nowrap; letter-spacing: 0; }
 .biography h2 { font-size: clamp(2rem, 4vw, 2.65rem); letter-spacing: -.025em; }
@@ -76,6 +76,8 @@ nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-colo
 }
 .contact p { overflow-wrap: anywhere; }
 .contact span { margin-right: 6px; }
+.profile-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; }
+.profile-links img { display: block; }
 
 .content-page {
   width: min(var(--section-width), calc(100% - 2 * var(--gutter)));
@@ -163,7 +165,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-colo
   nav a { padding: 10px 0; font-size: .82rem; }
   .home-layout { grid-template-columns: 1fr; }
   .profile-photo { width: min(100%, 300px); margin-top: 0; }
-  .profile-photo img { width: min(58vw, 235px); }
+  .profile-photo > img { width: min(58vw, 235px); }
   .bio-text { margin-top: 16px; }
   .skills-list { grid-template-columns: 1fr; gap: 3px; }
   .skills-list dd + dt { margin-top: 10px; }
