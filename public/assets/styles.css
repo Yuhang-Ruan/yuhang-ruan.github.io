@@ -44,11 +44,13 @@ nav a { color: var(--muted); padding: 24px 0; font-size: .9rem; text-decoration:
 nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-color: var(--link); }
 
 .home-hero, .home-banner-credit {
-  width: min(100%, 1440px, max(760px, 115svh));
+  width: min(100%, 1440px);
   margin-inline: auto;
 }
 .home-hero {
   position: relative;
+  height: 315px;
+  overflow: clip;
   background: #101918;
 }
 .home-hero .site-header {
@@ -62,9 +64,13 @@ nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-colo
 .home-hero nav a:hover, .home-hero nav a[aria-current="page"] { border-bottom-color: #fff; }
 .home-hero a:focus-visible { outline-color: #fff; }
 .home-banner {
+  position: absolute;
+  top: 78%;
+  left: 0;
   display: block;
   width: 100%;
   height: auto;
+  transform: translateY(-78%);
 }
 .home-banner-credit {
   padding: 3px clamp(12px, 3vw, 30px) 0;
@@ -193,6 +199,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-colo
   .header-inner { justify-content: space-between; gap: 0; flex-wrap: wrap; padding-top: 12px; }
   nav { width: 100%; gap: 8px clamp(10px, 3.5vw, 26px); }
   nav a { padding: 10px 0; font-size: .82rem; }
+  .home-hero { height: min(250px, 60vw); }
   .home-layout { grid-template-columns: 1fr; }
   .profile-photo { width: min(100%, 300px); margin-top: 0; }
   .profile-photo > img { width: min(58vw, 235px); }
