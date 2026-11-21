@@ -29,8 +29,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2rem); }
 h3 { font-size: 1.06rem; line-height: 1.45; }
 a { color: var(--link); text-underline-offset: .18em; text-decoration-color: #88a8c0; }
 a:hover { text-decoration-color: currentColor; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
-button { font: inherit; cursor: pointer; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
 
 .header-inner, .home-layout, .site-footer {
   width: min(1060px, calc(100% - 2 * var(--gutter)));
@@ -43,20 +42,6 @@ button { font: inherit; cursor: pointer; }
 nav { display: flex; flex-wrap: wrap; gap: clamp(14px, 2.3vw, 30px); margin-left: auto; }
 nav a { color: var(--muted); padding: 24px 0; font-size: .9rem; text-decoration: none; border-bottom: 2px solid transparent; }
 nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-color: var(--link); }
-#language-toggle {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 5px 0 5px 15px;
-  border: 0;
-  border-left: 1px solid var(--line);
-  background: transparent;
-  color: var(--muted);
-  font-size: .82rem;
-  white-space: nowrap;
-}
-#language-toggle .selected { color: var(--ink); font-weight: 600; }
-.language-separator { color: #697f91; }
 
 .home-layout {
   display: grid;
@@ -159,7 +144,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-colo
   font-size: .8rem;
 }
 
-.sr-only, .skip-link:not(:focus) {
+.skip-link:not(:focus) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -174,8 +159,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-colo
 
 @media (max-width: 760px) {
   .header-inner { justify-content: space-between; gap: 0; flex-wrap: wrap; padding-top: 12px; }
-  #language-toggle { order: 1; padding-left: 0; border-left: 0; }
-  nav { order: 2; width: 100%; gap: 8px clamp(10px, 3.5vw, 26px); }
+  nav { width: 100%; gap: 8px clamp(10px, 3.5vw, 26px); }
   nav a { padding: 10px 0; font-size: .82rem; }
   .home-layout { grid-template-columns: 1fr; }
   .profile-photo { width: min(100%, 300px); margin-top: 0; }
