@@ -67,16 +67,15 @@ nav a:hover, nav a[aria-current="page"] { color: var(--link); border-bottom-colo
   padding-block: 8px;
   border-top: 1px solid var(--line);
 }
-.contact {
-  display: grid;
-  gap: 4px;
-  margin-top: 12px;
-  font-size: .875rem;
-  color: var(--muted);
+.profile-links { display: flex; align-items: center; gap: 5px; margin-top: 8px; }
+.profile-links a {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
 }
-.contact p { overflow-wrap: anywhere; }
-.contact span { margin-right: 6px; }
-.profile-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; }
+.profile-links a:hover { background: #edf2f6; }
 .profile-links img { display: block; }
 
 .content-page {
